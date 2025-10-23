@@ -60,67 +60,84 @@
     </section>
 
     <!-- Packages Section -->
-    <section class="packages-section py-5 text-center">
-        <div class="container">
+<section class="packages-section py-5 text-center">
+  <div class="container">
 
-            <!-- Explore Packages Button -->
-            <p class="btn-packages mb-2">Explore Packages</p>
-            <p class="packages-caption mb-5">Discover curated journeys tailored for your unique style and adventure.</p>
+    <!-- Explore Packages Button -->
+    <p class="btn-packages mb-2">Explore Packages</p>
+    <p class="packages-caption mb-5">
+      Discover curated journeys tailored for your unique style and adventure.
+    </p>
 
-            <!-- Toggle Switch -->
-            <div class="package-toggle mb-5">
-                <div class="toggle-container">
-                    <span class="toggle-option active" id="option-left">Step Into Adventure</span>
-                    <span class="toggle-option" id="option-right">Craft Your Experience</span>
-                    <div class="toggle-slider"></div>
-                </div>
-            </div>
+    <!-- Toggle Switch -->
+    <div class="package-toggle mb-5">
+      <div class="toggle-container">
+        <span class="toggle-option active" id="option-left">Step Into Adventure</span>
+        <span class="toggle-option" id="option-right">Craft Your Experience</span>
+        <div class="toggle-slider"></div>
+      </div>
+    </div>
 
-            <!-- Carousel -->
-            <div class="carousel-container">
-                <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <!-- Responsive Bootstrap Carousel -->
+    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-                <div class="carousel-track">
-
-                    <div class="carousel-item active">
-                        <img src="./assets/images/10-Best-Tourist-Attractions-Halong.jpg" alt="Signature Journey">
-                        <div class="carousel-caption">
-                            <h3>Signature Journey</h3>
-                            <p>Curated experiences designed for timeless memories.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./assets/images/carousel2.webp" alt="Adventure Escape">
-                        <div class="carousel-caption">
-                            <h3>Adventure Escape</h3>
-                            <p>Thrilling destinations crafted with luxury comfort.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./assets/images/carousel3.jpg" alt="Tailored Getaway">
-                        <div class="carousel-caption">
-                            <h3>Tailored Getaway</h3>
-                            <p>Design your trip, your way — fully customized.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./assets/images/carousel4.jpg" alt="Luxury Escape">
-                        <div class="carousel-caption">
-                            <h3>Luxury Escape</h3>
-                            <p>Indulge in comfort and style in handpicked locations.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
+        <div class="carousel-item active">
+          <img src="./assets/images/10-Best-Tourist-Attractions-Halong.jpg" class="d-block w-100 rounded-4 shadow" alt="Signature Journey">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Signature Journey</h3>
+            <p>Curated experiences designed for timeless memories.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="carousel-item">
+          <img src="./assets/images/carousel2.webp" class="d-block w-100 rounded-4 shadow" alt="Adventure Escape">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Adventure Escape</h3>
+            <p>Thrilling destinations crafted with luxury comfort.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./assets/images/carousel3.jpg" class="d-block w-100 rounded-4 shadow" alt="Tailored Getaway">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Tailored Getaway</h3>
+            <p>Design your trip, your way — fully customized.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="./assets/images/carousel4.jpg" class="d-block w-100 rounded-4 shadow" alt="Luxury Escape">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Luxury Escape</h3>
+            <p>Indulge in comfort and style in handpicked locations.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators mt-4">
+        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="3"></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
     <!-- About Section -->
