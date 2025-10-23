@@ -33,56 +33,6 @@ if (optionLeft && optionRight && slider) {
   });
 }
 
-// ===============================
-// Custom Carousel Functionality
-// ===============================
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
-const prevBtn = document.querySelector('.nav-btn.prev');
-const nextBtn = document.querySelector('.nav-btn.next');
-
-let currentIndex = 0;
-
-if (track && items.length > 0 && prevBtn && nextBtn) {
-  // Update carousel position based on index
-  function updateCarousel() {
-    items.forEach((item, index) => {
-      item.classList.toggle('active', index === currentIndex);
-    });
-
-    const itemWidth = items[0].offsetWidth;
-    const gap = 30;
-    const offset = -(currentIndex * (itemWidth + gap));
-    track.style.transform = `translateX(${offset}px)`;
-  }
-
-  // Next Button
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % items.length;
-    updateCarousel();
-  });
-
-  // Previous Button
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    updateCarousel();
-  });
-
-  // Auto Resize Handling
-  window.addEventListener('resize', updateCarousel);
-  window.addEventListener('load', updateCarousel);
-}
-
-// ===============================
-// Auto Slide (Optional)
-// ===============================
-// Uncomment if you want automatic sliding
-/*
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % items.length;
-  updateCarousel();
-}, 5000);
-*/
 
 // ===============================
 // Mobile Responsiveness Enhancements
