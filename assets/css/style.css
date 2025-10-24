@@ -367,13 +367,13 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.btn-outline-primary {
-  border-color: #026873;
-  color: #026873;
+.btn-outline {
+  border-color: var(--accent-color);
+  color: var(--text-color);
 }
 
-.btn-outline-primary:hover {
-  background-color: #026873;
+.btn-outline:hover {
+  background-color: var(--secondary-color);
   color: #fff;
 }
 

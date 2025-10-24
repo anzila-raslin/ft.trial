@@ -13,51 +13,66 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">ft.trail</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">ft.trail</a>
+    
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Packages</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./assets/pages/craft_your_experience">Craft Your Experience</a></li>
-                            <li><a class="dropdown-item" href="./assets/pages/step_into_adventure">Step into Adventure</a></li>
-                        </ul>
-                    </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./assets/pages/craft_your_experience">Craft Your Experience</a></li>
+            <li><a class="dropdown-item" href="./assets/pages/step_into_adventure">Step into Adventure</a></li>
+          </ul>
+        </li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 
-                    <li class="nav-item ms-lg-3">
-                        <button class="chat-btn"><i class="bi bi-chat-dots-fill"></i> Say Hello! </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <li class="nav-item ms-lg-3">
+          <button class="chat-btn btn btn-primary"><i class="bi bi-chat-dots-fill"></i> Say Hello!</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero-section position-relative">
-        <img src="./assets/images/bg.webp" alt="Travel Background" class="homeimage">
-        <div class="hero-overlay"></div>
-        <div class="hero-content text-center text-light">
-            <h1>Experience Travel in Style and Comfort</h1>
-            <p>Design your perfect journey with personalized experiences and premium luxury.</p>
-            <div class="hero-buttons mt-4">
-                <a href="./assets/pages/craft_your_experience" class="btn-customize">Craft Your Experience</a>
-                <a href="./assets/pages/step_into_adventure" class="btn-travel">Step into Adventure</a>
-            </div>
-        </div>
-    </section>
+  <div class="position-relative">
+    <!-- Background Image -->
+    <img src="./assets/images/10-Best-Tourist-Attractions-Halong.jpg" alt="Travel Background" class="img-fluid w-100 vh-100" style="object-fit: cover;">
+    
+    <!-- Overlay -->
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" 
+         style="background: rgba(63, 59, 59, 0.55);"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-light px-3">
+      <h1 class="display-4 fw-bold mb-3">Experience Travel in Style and Comfort</h1>
+      <p class="lead mb-4">Design your perfect journey with personalized experiences and premium luxury.</p>
+      
+      <!-- Hero Buttons -->
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="./assets/pages/craft_your_experience" class="btn btn-lg btn-customize px-4 py-2">Craft Your Experience</a>
+        <a href="./assets/pages/step_into_adventure" class="btn btn-lg btn-travel px-4 py-2">Step into Adventure</a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Packages Section -->
 <section class="packages-section py-5 text-center">
@@ -70,114 +85,85 @@
     </p>
 
     <!-- Toggle Switch -->
-    <div class="package-toggle mb-5">
-      <div class="toggle-container">
-        <span class="toggle-option active" id="option-left">Step Into Adventure</span>
-        <span class="toggle-option" id="option-right">Craft Your Experience</span>
-        <div class="toggle-slider"></div>
+    <div class="package-toggle mb-5 d-flex justify-content-center">
+      <div class="toggle-container d-flex position-relative">
+        <span class="toggle-option active flex-fill text-center" id="option-left">Step Into Adventure</span>
+        <span class="toggle-option flex-fill text-center" id="option-right">Craft Your Experience</span>
+        <div class="toggle-slider position-absolute"></div>
       </div>
     </div>
 
     <!-- Responsive Bootstrap Carousel -->
-   <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
         <!-- Carousel item 1 -->
         <div class="carousel-item active">
           <div class="row g-4 justify-content-center">
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <div class="package-card shadow rounded-4 overflow-hidden h-100">
                 <img src="./assets/images/10-Best-Tourist-Attractions-Halong.jpg" class="img-fluid" alt="Exploring Andaman">
                 <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">EXPLORING ANDAMAN</h5>
+                  <h5 class="fw-bold">EXPLORING ANDAMAN</h5>
                   <p class="text-muted small mb-2">Water adventures and island hopping</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
+                  <div class="d-flex justify-content-between align-items-center small">
                     <span>🌤️ 6 days</span>
                     <span>🌙 5 nights</span>
                   </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
+                  <button class="btn btn-outline w-100 mt-3 rounded-pill">View Details</button>
                 </div>
               </div>
-            </div>
+            </div> 
 
-            <div class="col-md-6 col-lg-3">
-              <div class="package-card shadow rounded-4 overflow-hidden h-100">
-                <img src="./assets/images/carousel2.webp" class="img-fluid" alt="Seychelles Sailing">
-                <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">SEYCHELLES SAILING</h5>
-                  <p class="text-muted small mb-2">Sail across crystal-clear waters</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
-                    <span>🌤️ 6 days</span>
-                    <span>🌙 5 nights</span>
-                  </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="package-card shadow rounded-4 overflow-hidden h-100">
-                <img src="./assets/images/carousel3.jpg" class="img-fluid" alt="Eternal Jordan">
-                <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">ETERNAL JORDAN</h5>
-                  <p class="text-muted small mb-2">Live-aboard program</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
-                    <span>🌤️ 6 days</span>
-                    <span>🌙 5 nights</span>
-                  </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <div class="package-card shadow rounded-4 overflow-hidden h-100">
                 <img src="./assets/images/carousel4.jpg" class="img-fluid" alt="Sri Lanka">
                 <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">SRI LANKA</h5>
+                  <h5 class="fw-bold">SRI LANKA</h5>
                   <p class="text-muted small mb-2">Live-aboard program</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
+                  <div class="d-flex justify-content-between align-items-center small">
                     <span>🌤️ 6 days</span>
                     <span>🌙 5 nights</span>
                   </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
+                  <button class="btn btn-outline w-100 mt-3 rounded-pill">View Details</button>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
         <!-- Carousel item 2 -->
         <div class="carousel-item">
           <div class="row g-4 justify-content-center">
-            <!-- Duplicate or replace with more packages -->
-            <div class="col-md-6 col-lg-3">
+
+            <div class="col-12 col-sm-6 col-lg-3">
               <div class="package-card shadow rounded-4 overflow-hidden h-100">
                 <img src="./assets/images/carousel3.jpg" class="img-fluid" alt="Thailand">
                 <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">THAILAND</h5>
+                  <h5 class="fw-bold">THAILAND</h5>
                   <p class="text-muted small mb-2">Exotic island adventure</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
+                  <div class="d-flex justify-content-between align-items-center small">
                     <span>🌤️ 5 days</span>
                     <span>🌙 4 nights</span>
                   </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
+                  <button class="btn btn-outline w-100 mt-3 rounded-pill">View Details</button>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-3">
               <div class="package-card shadow rounded-4 overflow-hidden h-100">
                 <img src="./assets/images/10-Best-Tourist-Attractions-Halong.jpg" class="img-fluid" alt="Maldives">
                 <div class="p-3 text-start">
-                  <h5 class="fw-bold text-primary">MALDIVES</h5>
+                  <h5 class="fw-bold">MALDIVES</h5>
                   <p class="text-muted small mb-2">Luxury overwater escape</p>
-                  <div class="d-flex justify-content-between align-items-center text-secondary small">
+                  <div class="d-flex justify-content-between align-items-center small">
                     <span>🌤️ 7 days</span>
                     <span>🌙 6 nights</span>
                   </div>
-                  <button class="btn btn-outline-primary w-100 mt-3 rounded-pill">View Details</button>
+                  <button class="btn btn-outline w-100 mt-3 rounded-pill">View Details</button>
                 </div>
               </div>
             </div>
@@ -187,7 +173,7 @@
 
       </div>
 
-      <!-- Controls -->
+      <!-- Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
       </button>
@@ -198,6 +184,7 @@
     </div>
   </div>
 </section>
+
 
 
 
